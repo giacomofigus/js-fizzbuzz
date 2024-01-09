@@ -8,3 +8,25 @@ Proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro program
 BONUS 1: Crea un container nel DOM , aggiungendo (attraverso la funzione append()) un elemento html con il numero o la stringa corretta da mostrare.
 BONUS 2: Applica stili differenti agli elementi aggiunti al DOM nel BONUS 1, a seconda che il valore inserito sia un numero, un fizz, un buzz o un fizzbuzz. Se sei a corto di idee per lo stile, potresti prendere spunto dallo screenshot fornito in consegna.
 */
+const lista = document.querySelector("ul.myList")
+
+for(let i = 0; i <= 100; i++){
+    if(i % 3 === 0 && i % 5 === 0){
+        const element = `<li style="color:purple;"> FizzBuzz ${i} </li>`
+        lista.innerHTML += element
+
+    } else if(i % 3 === 0 ) {
+        const element = `<li style="color: red;"> Fizz ${i} </li>`
+        lista.innerHTML += element  
+
+    } else if ((i % 5) === 0){
+        const element = `<li style="color: blue;"> Buzz ${i} </li>`
+        lista.innerHTML += element
+        
+    } else{
+        const element = `<li style="color: black;"> ${i} </li>`
+        lista.innerHTML += element
+    }
+    
+    
+}
